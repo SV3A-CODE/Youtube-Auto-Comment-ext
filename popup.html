@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.font.im/css?family=Rajdhani" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+  </head>
+  <body tabindex="1">
+    <div style="text-align:center;margin-top: 5px">
+      <h3 style="margin-top: 15px;padding:5px;">
+        <span id="topTitle" style="color:red;border-bottom: 1px solid #bdc3c7;padding-bottom: 5px;text-align: center;">
+          Youtube Comment Bot Pro
+        </span>
+        <span class="gfont" id="beta" style="margin-top: 13px; position: absolute;left: 270px;top: 13px;"></span>
+        <span id="profile_btn" style="float:right;margin-right: 8px; position: absolute; left: 360px;" class="btn">
+          <!-- <i style="font-size: 16px;" class="icon ion-android-person"></i> -->
+          <img src="images/account.png" width="16" height="16"/>
+        </span>
+        <span id="settings_btn" style="float:right;margin-right: 10px; position: absolute; left: 342px;" class="btn">
+          <!-- <i style="font-size: 16px;" class="icon ion-android-settings"></i> -->
+          <img src="images/setting.png" width="16" height="16"/>
+        </span>
+        <a id="help_btn" style="float:right;margin-right: 10px; position: absolute; left: 324px;" class="btn" href="www.baidu.com">
+          <!-- <i style="font-size: 16px;" class="icon ion-android-settings"></i> -->
+          <img src="images/help.png" width="16" height="16"/>
+        </a>
+        <span id="close_btn" style="float: right;margin-right: 8px;display: none; position: absolute; left: 362px;" class="btn">
+          <i style="font-size: 16px;" class="icon ion-close-round"></i>
+        </span>
+      </h3>
+    </div>
+    <div id="content" class="ex-body">
+
+<h3 class="title">
+          <span>Cracked By BLACKHATPROTOOLS.info</span>
+        </h3>
+
+        <h3 class="title">
+          <span>Comment By:</span>
+        </h3>
+        <h4 id="rd1" class="subtitle">
+          <input name="comment_keyword" type="radio" checked  value="keyword"/><span id="keywordsLabel">Keywords (One keyword per line)</span>
+        </h4>
+        <div id="keyword_text">
+          <textarea id="keywords" name="name" rows="3" style="margin-left: 29px;font-family: 'Rajdhani', sans-serif!important;" placeholder="Input the keywords of your niche"></textarea>
+        </div>
+        <h4 id="rd2" class="subtitle">
+          <input name="comment_keyword" type="radio" value="url"/><span id="urlsLabel">Video Url list (One url per line)</span>
+        </h4>
+        <h4 id="rd3" class="subtitle">
+          <input name="comment_keyword" type="radio" value="search_url"/><span id="urlsLabel">Search Url list (One url per line)</span>
+        </h4>
+        <h3 class="title">
+          <span>Your Comments:</span>
+        </h3>
+        <h4 class="subtitle">
+            <span>You can set up multiple comments (One comment per line), the bot randomly selects one of these for each comment.</span>
+        </h4>
+        <div>
+          <textarea id="comment" name="name" rows="3" style="margin-left: 29px;font-family: 'Rajdhani', sans-serif!important;" placeholder="Input the comments you want to use"></textarea>
+        </div>
+        <h3 class="title">
+          <span>How Quickly?</span>
+        </h3>
+        <div>
+          <label style="margin-left: 29px;">After watching</label>
+          <input id="min_play_time" value="30" style="width: 30px;padding: 5px;border: 1px solid #ecf0f1;font-family: 'Rajdhani', sans-serif!important;" type="number">
+          to
+          <input id="max_play_time" value="60" style="width: 30px;padding: 5px;border: 1px solid #ecf0f1;font-family: 'Rajdhani', sans-serif!important;" type="number">
+          seconds
+        </div>
+        <h3 class="title">
+          <span>Max Comments:</span>
+        </h3>
+        <div>
+          <input id="comment_cnt" value="10" style="width: 300px;padding: 5px;border: 1px solid #ecf0f1;margin-left: 29px;font-family: 'Rajdhani', sans-serif!important;" type="number">
+        </div>
+        <div style="margin-top: 20px;text-align: center;">
+          <button  class="ex-btn" type="button" id="start_btn"><h3 style="font-family: 'Rajdhani', sans-serif!important;">Start Comment</h3></button>
+
+          <button class="dis-ex-btn" type="button" id="dis_start_btn"><h3 style="font-family: 'Rajdhani', sans-serif!important;">Start Comment</h3></button>
+        </div>
+        
+    </div>
+    <div class="ex-body" id="profile" style="display:none">
+      <div style="text-align: center;color: #95a5a6;">
+        <h3 class="title" style="text-align:center;margin:0px;">
+          <span>Your Current Token</span>
+        </h3>
+        <p style="color: #111;">
+          <span id="UUID" value=""></span>
+        </p>
+        <p style="width:336px;margin: auto;">
+          <span>
+          <i class="icon ion-information-circled"></i>&nbsp;
+          if you already pay for standard features, please enter here the token you received in the welcome email.
+        </span>
+        </p>
+        <div style="margin-top:10px;text-align: center">
+          <input placeholder="Enter Token" style="width: 310px;font-size: 18px;padding: 5px;border: 1px solid #95a5a6;text-align: center;font-family: 'Rajdhani', sans-serif!important;" type="text" id="newuuid" value="">
+          <p id="uuidErr" style="display:none; color: red;">
+            <strong>Invalid Token.</strong>
+          </p>
+        </div>
+        <div style="margin-top:10px;text-align: center">
+          <button id="update_token_btn" style="width: 320px;margin:0 auto;font-family: 'Rajdhani', sans-serif!important;" class="ex-btn" type="button"><h3>Update Token</h3></button>
+        </div>
+        <div style="color: #95a5a6;margin-top: 15px;margin-bottom: 25;">
+          <!-- Upgrade to <span style="">Pro Version</span>, <a target="_blank" href="https://google.com">Click Here</a> -->
+          Note: It will only work with a valid standard token.
+        </div>
+        <div style="border-bottom: 1px solid #bdc3c7; margin-top: 15px;">
+        </div>
+        <div id="cancelTitle" style="color: #fd737c; margin-top: 20px;font-size: 16px;">
+          <!-- Upgrade to <span style="">Pro Version</span>, <a target="_blank" href="https://google.com">Click Here</a> -->
+          Cancel my subscription.
+        </div>
+        <div class="cancelSub" style="margin-top:10px;text-align: center">
+          
+          <button id="cancelButton" style="width: 320px;margin:0 auto;font-family: 'Rajdhani', sans-serif!important; background-color: #c6c6c6;" class="ex-btn" type="button"><h3>Unsubscribe</h3></button>
+        </div>
+      </div>
+    </div>
+    <div class="ex-body" id="settings" style="display:none">
+      <h4 class="subtitle">
+        <span>Your YouTube Account (login Name|Password)</span>
+      </h4>
+      <div style="text-align: center;color: #95a5a6;"></div>
+        <div>
+          <textarea id="accounts" name="accounts" rows="10" style="margin-left: 29px;font-family: 'Rajdhani', sans-serif!important;" placeholder="Peter2002|123456&#10;Erice30003|abcdef"></textarea>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center">
+      <h4 class="subtitle" style="margin:0px;">
+        <span>version 1.0</span>
+      </h4>
+    </div>
+    <script src="js/jquery-3.4.0.min.js"></script>
+    <script src="js/core.js" charset="utf-8"></script>
+    <script src="js/utils.js" charset="utf-8"></script>
+    <script src="js/main.js" charset="utf-8"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
